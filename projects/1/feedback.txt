@@ -1,0 +1,30 @@
+Assignment Feedback
+
+My name is: Daniel Slapelis
+My login ID is: djs7209
+
+Assignment name is: Project 1
+
+
+What did I learn?
+C is hard, I'm not a good coder, I don't actually understand what a program is doing until the last 2 days.
+
+I learned how to implement header functions and use them -- C is sort of(?) like java.
+
+What was easy about this assignment?
+The easiest part was writing the read_symbols function
+
+What gave you problems/troubles?
+Everything -- in all seriousness, printing the codeword, getting the right number of "num_valid"....for some reason my program subtracts from the num_valid. Major headache.
+
+
+
+What can the instructor do to improve this assignment?
+Nothing really...well documented, I like the ability to discuss on mycourses...
+
+
+
+What would you have liked to do in this assignment?
+I would have liked to have done better. I did my best. 
+
+

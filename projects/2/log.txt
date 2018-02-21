@@ -1,0 +1,54 @@
+commit b672f7523e269f73b6a3347e13d5b20fa3483d8e
+Author: AresMachina <djs7209@rit.edu>
+Date:   Thu Apr 9 07:44:08 2015 -0400
+
+    Cleaned up jukebox.c a little bit.
+
+commit f7b8693c447aa3dd7bf25c5e426d0cafda2a91be
+Author: AresMachina <djs7209@rit.edu>
+Date:   Wed Apr 8 02:03:53 2015 -0400
+
+    jukebox kind of works now lol
+
+commit 74c027321a46f91b489ccc75e4dadf9c095d1f74
+Author: AresMachina <djs7209@rit.edu>
+Date:   Tue Apr 7 21:23:12 2015 -0400
+
+    Completed a lot of the jukebox
+
+commit f763c5ea0efa4e8003344f0e3992b43b48c17343
+Author: AresMachina <djs7209@rit.edu>
+Date:   Tue Apr 7 14:50:32 2015 -0400
+
+    flawless table.c ;)
+
+commit 8ee8e0cd64439d44fd52bcb6ab14efc6713ad583
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun Apr 5 23:35:25 2015 -0400
+
+    KK SO I FIXED table::keys and table::value so that they add elements to them correctly
+
+commit aa4253fc6ef50e2ca68ea5961823b9645e8f39b5
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun Apr 5 22:27:16 2015 -0400
+
+    doesnt rehash properly, but I backed it up for good conscience
+
+commit ef70a412d31ac5a9b0c7129148617e8bf10533d5
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun Apr 5 20:41:00 2015 -0400
+
+    completed table::keys()
+
+commit 956d385c507d944b09f47d6a9cc18ba8b23acb89
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun Apr 5 14:05:14 2015 -0400
+
+    debugged up to table::has()
+
+commit 7be2e670d67e2d679ed87a497101559356a18d5b
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun Apr 5 13:20:41 2015 -0400
+
+    Debugged up to get() function
+

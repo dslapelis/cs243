@@ -1,0 +1,26 @@
+http://www.theregister.co.uk/2015/03/19/pwn2own_pays_out_317500_for_hacking_adobe_microsoft_and_mozilla/
+
+Hackers prove security still a myth on Windows PCs, bag $320,000
+Pwn2Own teams exploit fresh holes in Adobe code, Firefox and Redmond's kernel
+
+19 Mar 2015 at 20:11, Iain Thomson
+
+Day one of the 2015 Pwn2Own hacking contest in Vancouver, Canada, saw big wins for contestants and headaches for software makers: competing teams successfully exploited fresh vulnerabilities in Adobe Flash and Reader, Microsoft's Windows and Internet Explorer, and Mozilla's Firefox, to hijack PCs.
+
+The competition, now in its eighth year at the CanSecWest show, is run by HP’s Zero Day Initiative (ZDI) and Google’s Project Zero, and pits security researchers against some of the most popular applications in a time-limited hacking contest. Entrants have to explain how they managed their attacks, and there are millions of dollars up for grabs for canny crackers.
+
+On Wednesday, security researcher Nicolas Joly came away $90,000 richer after he combined a use-after-free (UAF) remote-code execution vulnerability and sandbox escape directory traversal vulnerability in Adobe's Flash to execute arbitrary code (earning $30,000), and double that for harvesting both information from Adobe Reader, and running arbitrary code remotely.
+
+"It's kind of an achievement when you come to Vancouver you're here for holidays and then you come back with some cash," Joly said, revealing that he'd only written the final part of the Reader exploit on the plane while on his way to the conference.
+
+The Tencent PCMgr and KeenTeam hacking collectives shared $140,000 in prizes in Wednesday's contest – earning $30,000 for taking control of the heap in Reader with an integer overflow, and $25,000 for exploiting that to gain SYSTEM-level code execution in Windows via a bug in the kernel's TrueType font handling.
+
+They bagged another $60,000 for using a heap overflow bug in Flash to gain remote code execution, and then escalate their privileges to SYSTEM level via another TrueType font flaw in the kernel for an extra $25,000 payout
+
+But the speed demon of the day was researcher Mariusz Mlynski, who took just 0.512 seconds to exploit a cross-origin vulnerability in Firefox to attack a logical flaw in Windows for privilege escalation and remote code execution, earning himself $55,000 in the process.
+
+Meanwhile newcomers 360Vulcan Team broke 64-bit Microsoft Internet Explorer 11 with an uninitialized memory vulnerability to allow medium-integrity code execution for a $32,500 prize.
+
+The contest continues with a second round of targets today, including Apple Safari, Google Chrome, and Internet Explorer. The makers of the vulnerable software are expected to be told all the details of the security holes so their products can be patched, before more information is shared publicly.
+
+

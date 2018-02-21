@@ -1,0 +1,64 @@
+Lab 1: System Intro
+Activity 1: questions1.txt, warning.c : 30 points total
+Name: <<< DANIEL SLAPELIS >>>
+
+1. When you first log in, what is the absolute path of your home directory?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    /home/stu13/s15/djs7209
+
+2. What command will display the contents of your current
+working directory, so that it shows the difference between
+files and directories?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    ls
+
+3. What command would you use to change your working directory from
+your home directory to the existing subdirectory Courses/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    cd
+
+4. Within the Courses/ subdirectory, what command would you use to
+create the subdirectory csci243/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    mkdir
+
+5. When warning.c is compiled as: 
+        gcc -c warning.c
+    There is no indication of any warnings/problems.
+    
+    a.) What compiler flag is used to enable the display of warnings?
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        -Wall
+
+    b.) In your own words, explain all warnings from compiling warning.c.
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        Well there are a ton of warnings, but it was saying that there were invalid symbols. I took this to mean that
+        there was something wrong with the syntax of the code because I didn't think english characters would be an issue.
+        So then that lead me to see that there was an error for the compute function. The compute function was never declared
+        which obviously caused all the issues.    
+    c.) Fix warning.c so it compiles without warning and runs correctly.
+
+	(Your answer is the submitted code.)
+
+6. What compiler flag compiles C programs using the ISO C99 standard?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    -std=c99
+
+7. Put the four steps of compilation process into their proper order from
+first to last.
+
+    A. Link
+    B. Assemble
+    C. Preprocess
+    D. Compile
+
+    
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    C, D, B, A

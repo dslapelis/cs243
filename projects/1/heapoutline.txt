@@ -1,0 +1,53 @@
+Notes on the Node Heap
+Sun Feb  8 12:16:23 EST 2015
+
+The heap is a minimum-ordered heap, and 
+its implementation is specific to the application.
+
+A Heap implementation requires input of a pre-defined, fixed-capacity array
+of Node-type items whose ordering field is called 'frequency'.
+(footnote: How to dynamically allocate heap storage comes later in the course.)
+
+Components of the heap are the heap's state.
+The supplied heap structure has the following fields:
+	#heap.capacity is the initialized maximum capacity.
+	#heap.size is the current number of valid entries in the heap.
+	#heap.array is the array that holds the heap's entries.
+
+All entries in the heap's array between size and index capacity-1 are unused.
+Code needs to initialize memory to indicate that an entry is an unused entry.
+There may be zero or more unused nodes in the heap.
+Also Symbol struct entries in the Node may be unused; that means code also
+needs to initialize Symbol memory to indicate that a Symbol is an unused entry.
+
+The heap uses an application-specific function to compare Nodes.
+(footnote: How to parameterize with a function comes later in the course.)
+
+compare_nodes( heap, index1, index2 )	# asks is index1 entry < index2 entry?
+
+Because the storage for the heap is pre-allocated, it will be necessary
+to swap entries when moving/copying Node structures within the heap's array.
+A swap function is needed for this implementation.
+
+sift_up( heap, index )	# sifts entries up from the index.
+
+	# heap is a reference (pointer) to an initialized heap.
+	# pre: index <= heap.size
+	# post: heap.array has the required min-heap order property.
+	# algorithm/implementation details
+	# starting from the index location in heap.array, sift an entry up
+	# until heap.array has the required min-heap order property.
+	# datap is a reference (pointer) to the start of the heap's array.
+	# entries in heap.array have now been re-heapified
+
+sift_down( heap, index )	# sifts entries down from the index.
+
+	# heap is a reference (pointer) to an initialized heap.
+	# pre: 0 <= index < heap.size
+	# post: heap.array has the required min-heap order property.
+	# algorithm/implementation details
+	# starting from the index location in heap.array, sift the entry down
+	# until the heap.array has the required min-heap order property.
+	# datap is a reference (pointer) to the start of the heap's array.
+	# entries in heap.array have now been (re)heapified.
+

@@ -1,0 +1,142 @@
+Homework 4: Using Valgrind
+
+Name: <<< Daniel Slapelis >>>
+
+Instructions
+------------
+
+These questions deal with the song program found in song.c, mtime.c and
+songtest.c.  Compile these files with the options found in header.mak
+for testing. You may want to generate a Makefile for building the 
+programs. Recall that you can generate the Makefile with the command 
+"gmakemake > Makefile".
+
+NOTE: DO THIS ASSIGNMENT ON A 64-BIT OS (i.e. not glados.cs.rit.edu).
+
+We have included a compiled copy of the solution "goodsongtest" for you
+to run to see how the program should behave.
+
+The nature of these activities will have you switching back and forth
+between running valgrind and looking at code. You may find it helpful to
+have a second shell window open; run valgrind in the first window, and 
+execute other commands (such as 'more', or an editor) in the second window.
+
+Questions
+---------
+
+1. Compile and link the modules and run "songtest". What happens when you
+   run the program? (hint: If the program hangs, try typing ctrl-c to end)
+
+******************** Your answer below (10 points) ********************
+	When I run the program, it seems to complete, but ends by printing "*** Error in `./songtest': double free or corruption (out): 0x0000000001820020 ***
+Aborted (core dumped)"
+
+This indicates to me that there is a memory leak.
+***********************************************************
+
+2. Run "songtest" again, this time using the valgrind command:
+   valgrind --leak-check=full songtest
+   How many bytes of memory are reported lost?
+
+******************** Your answer below (10 points) ********************
+436 bytes
+***********************************************************
+
+3. Move to the top of the valgrind output. You will see a portion of
+   the songtest output followed by some errors like "use of
+   uninitialised value" and "invalid write".
+
+   a. What function in the source code provided is the program in when 
+      the error is reported?
+
+******************** Your answer below (5 points) ********************
+    strcpy(d->artist, s->artist) ;
+***********************************************************
+
+   b. Based on the output, examine the code for the suspect function.
+      What is wrong with the function?
+
+******************** Your answer below (5 points) ********************
+The function reallocates memory based on the size of the previous string (in byte) and then adds one. Instead, it should be allocating based on string length and then adding one.
+***********************************************************
+
+   c. After fixing, recompile the program and run again.
+      It should get farther.
+
+******************** Your answer below ********************
+
+  (No answer required here.)
+
+***********************************************************
+
+4. Run valgrind again. Notice that after the program output valgrind
+   reports two occurrences of "Invalid free()". The report says that
+   they are in songDelete(). Note, however, that songDelete() is called
+   several times in songtest.c and it only has problems with two of
+   the calls. This report by valgrind is a bit misleading, but study
+   this area of code carefully for the true error.
+
+   a. What song is being deleted when we get the "Invalid free()" error
+      reported by valgrind?
+
+******************** Your answer below (5 points) ********************
+The current song3 song is: Title: Its a Beatiful Morning  Artist: Chicago
+***********************************************************
+
+   b. What fix is needed to eliminate the "Invalid free()" message?
+
+******************** Your answer below (5 points) ********************
+songDelete in song.h needs to accept a pointer to a pointer for parameters, all of songDelete in song.c needs to reference the pointer to s, and finally all songDelete calls in main need to accept the address of a song as an parameter.
+***********************************************************
+
+   Make the fix you described, re-build and re-run the program.
+
+5. Just before "LEAK SUMMARY" there are 50 bytes lost(in record 12 of 12). 
+
+   a. What line of code was it on when it detected this problem?
+      (Note that the point of allocation, not loss, is reported.)
+      Identify the file name, line number and the code text.
+
+******************** Your answer below (5 points) ********************
+ song.c line 147, sstr = malloc( len )
+***********************************************************
+
+   b. If you examine the errors just prior to the one from the previous 
+      question, you will see that they are all caused by the same code.
+      Examine the code to determine what you need to change to fix each
+      of the problems. Explain your solution.
+
+******************** Your answer below (5 points) ********************
+song.c has a function, songToString which returns a string "sstr". This string is never freed after it is used in songtest.c (and it used a lot). So, in order to fix this problem, everytime that sstr is used in a print function, we need to "free(sstr);" in order to fix this issue. 
+***********************************************************
+
+
+6. After making all of these fixes, compile the program and run the
+   valgrind command again. Notice that we are still leaking 24 bytes
+   (if run on a 64-bit OS; 12 otherwise) once in a while.
+
+   a. The leaks are occuring because of memory allocated by two 
+      functions. Name those functions.
+
+******************** Your answer below (3 points) ********************
+newSong, songCopy
+***********************************************************
+
+   b. Those functions have "passed on" the responsibility of freeing
+      the memory they allocated. How is the memory allocated by those
+      functions supposed to be freed?
+
+******************** Your answer below (3 points) ********************
+songDelete is supposed to free the memory
+***********************************************************
+
+   c. Examine the routine that should free the memory. What needs to be
+      done to properly free the allocated memory?
+
+******************** Your answer below (4 points) ********************
+songDelete must free itself after it frees all of its members. 
+***********************************************************
+
+At this point, if you did your work correctly, your program should run
+to completion with no memory management errors detected by valgrind.
+

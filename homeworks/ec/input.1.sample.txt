@@ -1,0 +1,50 @@
+http://www.theregister.co.uk/2015/04/13/nsa_back_doors_are_a_bad_idea_give_us_a_front_door_key/
+
+NSA: 'Back doors are a bad idea, give us a FRONT door key'
+Spooks in still-don't-like-encryption shock
+
+13 Apr 2015 at 05:32, Richard Chirgwin
+
+“Give me your tired, your poor, your huddled masses yearning for an iPhone, and we'll give you an encryption master key” seems to be the dream of the National Security Agency (NSA).
+
+The NSA's latest thought bubble, floated in front of noted cryptography journal The Washington Post, is that a “master key” for all products running encryption should be created, split up, and distributed among several agencies.
+
+The idea was raised in a speech by Michael Rogers, boss of the NSA, in a speech at Princeton University.
+
+“I don’t want a back door,” Rogers reportedly said, “I want a front door. And I want the front door to have multiple locks. Big locks.” The idea seems to be that only when all the agencies holding portions of a key decide to use it together will decryption become possible.
+
+Whether Rogers also considered the conditions under which the keys should be brought together to unlock a phone, the WashPo didn't report.
+
+Also not mentioned is what would happen if someone reverse-engineered a key that would be (apparently) hard-coded into the firmware, probably because such things never happen. Nor do the deepest secrets of national security agencies ever eventually leak, it seems, and other countries would have no problem with a master key held (presumably) by US agencies.
+
+Apparently, that's not the only idea the White House has in mind. The WashPo report also states that the administration is looking at simple mirroring of messages, under judicial oversight.
+
+A judge might “direct a company to set up a mirror account so that law enforcement conducting a criminal investigation is able to read text messages shortly after they have been sent”, and insist that the mirror backs up stuff like photos residing on the telephone, before it's encrypted for communication.
+
+Vulture South can't wait to see the tech sector's response to these ideas. 
+
+
+http://www.theregister.co.uk/2015/01/13/fbi_nsa_relationship/
+
+FBI has its fingers deep in NSA surveillance pie, declassified report shows
+Feds had a hand in PRISM, too
+
+13 Jan 2015 at 00:29, Iain Thomson
+
+The FBI had, and most likely still has, a much closer involvement with the NSA’s mass surveillance programs than previously thought – with access to raw foreign intelligence and data on Americans gleaned from the PRISM program.
+
+The 231-page report, from the Department of Justice’s Inspector General, was obtained – albeit in a heavily redacted form – after a Freedom of Information request by The New York Times, a request made possible using key details leaked by whistleblower Edward Snowden.
+
+The report finds that in 2008 – almost since the inception of the PRISM program, which allows the NSA access to citizens' information stored by Microsoft, Google, Facebook and Yahoo! among others – the FBI had access to slurped private data.
+
+The following year the Feds requested and was given its own raw feed on the activities of foreign nationals spied on under Section 702 of the Patriot Act. By April 2012 the agency, which is tasked with domestic security operations, was beginning to ask for information on specific individuals.
+
+There is praise for the agency’s 702 investigation team: it had "implemented its targeting procedures with commendable deliberation, thoroughness and professionalism,” the Inspector General concluded.
+
+It’s clear that last week’s admission that the NSA had been helping the FBI probe the attack on Sony Pictures is just the tip of the iceberg, and the two agencies have been working closely for some time to share information and techniques.
+
+This could prove an interesting fillip to the trial of Ross Ulbricht – allegedly the Silk Road boss Dread Pirate Roberts – which starts on Tuesday. The FBI is claiming mistakes by Ulbricht led to his arrest, but his defense team asserts that the Feds must have hacked their client, possibly with NSA help. 
+
+
+
+

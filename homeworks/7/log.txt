@@ -1,0 +1,29 @@
+commit 92faf64b15aa73b81a84f7e8d132724a236b4cfd
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun May 3 16:56:38 2015 -0400
+
+    Now it really does print the correct values...
+
+commit aa8dc3b0e2aae2edcfa8388d1caad47135669a4f
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun May 3 16:55:09 2015 -0400
+
+    Finally prints the correct values
+
+commit d01fa319096f38d0f5f49855416d2144332fbbe5
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun May 3 13:42:15 2015 -0400
+
+    Fixed byte section issues
+
+commit d4a4595876583726c4f6ebcd7382d7f4759e08eb
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun May 3 13:37:31 2015 -0400
+
+    Fixed tabbing
+
+commit 177ece896e9029cac8a0ebeae4c5f621219ad286
+Author: AresMachina <djs7209@rit.edu>
+Date:   Sun May 3 13:27:16 2015 -0400
+
+    Not sure if printing the correct information.

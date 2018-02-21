@@ -1,0 +1,24 @@
+Lab 1: System Intro
+Activity 2: questions2.txt, main/circle code : 30 points total
+Name: <<< YOUR NAME HERE >>>
+
+8. Given the program files main.c, circle.h and circle.c:
+
+    a.) What commands will compile the source files into object files?
+        
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        gcc -o main.c
+	gcc -o circle.c
+        gcc -o circle.h
+
+    b.) What command will link the object files into an executable named broken?
+        
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	gcc -o broken main.c circle.c circle.h
+
+    c.) Why does the program compile but fail to link?
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	Header files can't be linked to object files. They are referenced for definition by a C file...so circle.c references
+	circle.h for the functions and the main.c references circle.c for the functions getArea and getCircumference.
+	"gcc -o broken main.c circle.c" should be used instead.
